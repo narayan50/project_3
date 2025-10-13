@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 0px;
     padding: 0;
     box-sizing: border-box;
 
@@ -8,7 +8,7 @@
 /* nav bar */
 .navbar{
 
-    background-color: rgb(37 48 64 );
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@
     font-family: wfont_a8699e_270377c99ee9464b88b564e83be79534, wf_270377c99ee9464b88b564e83, orig_p_22_underground_medium;
     letter-spacing: 0.15em;
     font-size: 11px;
-
+   
  }
 
  /* brand */
@@ -44,10 +44,10 @@
 
  }
 
-
  .navbar ul {
     list-style: none;
     display: flex;
+    flex-wrap: nowrap; /*avoid text wrap*/
     gap: 50px;
     
     
@@ -56,32 +56,34 @@
     color: whitesmoke;
     text-decoration: none;  
     flex-grow: 0;
+    white-space: nowrap;
 
  }
  /* BANNER */
  .banner{
-    background-image: url(Images/pexels-spencer-4356144.jpg);
+    background-image: url(Images/pexels-miroalt-176398.jpg);
     background-size: cover;
-    background-position: center;
-    height: 500px;
+    background-position: center 30% ;
+    background-repeat: no-repeat;
+    height: 700px;
     width: 100%;
-    height: 60vh;
-    min-height: 300px;
+    height: 67vh;
+    min-height: 400px;
+    position: relative;
+ 
  }
- @media (max-width: 480px) {
+ @media (max-width: 500px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
-
     .navbar ul {
         flex-direction: column;
         gap: 15px;
         padding: 10px 0;
         width: 100%;
     }
-
     .social-icons {
         justify-content: flex-start;
         gap: 15px;
@@ -91,3 +93,22 @@
         height: 40vh;
     }
 }
+
+/* sticky box */
+
+.sticky-box{
+   position: sticky;
+    background-color: brown;
+    width: fit-content;
+    top: 50%;
+    right: 0;
+    transform: rotate(-90deg) translateY(50%);
+    transform-origin: right bottom;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    padding: 12px 10px;
+    
+ 
+}
+
+
