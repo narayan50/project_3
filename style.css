@@ -7,20 +7,28 @@
 
 /* nav bar */
 .navbar{
-
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
-    padding: 30px 20px;
+    padding: 30px 40px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     text-transform: none;
     font-family: wfont_a8699e_270377c99ee9464b88b564e83be79534, wf_270377c99ee9464b88b564e83, orig_p_22_underground_medium;
     letter-spacing: 0.15em;
     font-size: 11px;
+    top: 0;
+    left: 0;
+    
    
+ }
+ .brand{
+  
  }
 
  /* brand */
@@ -35,12 +43,14 @@
     display: flex;
     gap: 20px;
     align-items:center ;
+  
     
 
  }
  .social-icons i {
     font-size: 19px;
     color: white;
+     
 
  }
 
@@ -48,7 +58,8 @@
     list-style: none;
     display: flex;
     flex-wrap: nowrap; /*avoid text wrap*/
-    gap: 50px;
+    align-items: center;
+    gap: 30px;
     
     
  }
@@ -56,6 +67,7 @@
     color: whitesmoke;
     text-decoration: none;  
     flex-grow: 0;
+    flex-shrink: 1;
     white-space: nowrap;
 
  }
@@ -72,11 +84,16 @@
     position: relative;
  
  }
- @media (max-width: 500px) {
+ /*
+ @media (max-width: 800px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 10px 20px;
+    }
+    .navbar div{
+        margin-bottom: 0;
+        margin-bottom: 10px;
     }
     .navbar ul {
         flex-direction: column;
@@ -87,23 +104,25 @@
     .social-icons {
         justify-content: flex-start;
         gap: 15px;
+        align-self: flex-start;
     }
 
     .banner {
         height: 40vh;
+        margin-top: 150px;
     }
 }
-
+*/
 /* sticky box */
 
 .sticky-box{
-   position: sticky;
+   position: fixed;
     background-color: brown;
     width: fit-content;
-    top: 50%;
-    right: 0;
-    transform: rotate(-90deg) translateY(50%);
-    transform-origin: right bottom;
+    top: 65%;
+    left: 0;
+     transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left top;
     color: rgb(255, 255, 255);
     font-style: normal;
     padding: 12px 10px;
