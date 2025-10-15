@@ -1,133 +1,140 @@
-*{
-    margin: 0px;
-    padding: 0;
-    box-sizing: border-box;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-/* nav bar */
-.navbar{
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 30px 40px;
-    font-style: normal;
-    font-weight: bold;
-    text-transform: none;
-    font-family: wfont_a8699e_270377c99ee9464b88b564e83be79534, wf_270377c99ee9464b88b564e83, orig_p_22_underground_medium;
-    letter-spacing: 0.15em;
-    font-size: 11px;
-    top: 0;
-    left: 0;
-    
+body{
    
- }
- .brand{
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+ -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+ -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family :"Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: visible;
+  overflow-x: auto;
+  scrollbar-width: none;
+  letter-spacing: 0.12em;
+  top: 0;
+  left: 0;
+  }
   
- }
+.navbar::-webkit-scrollbar {
+  display: none;  /* hide scrollbar (Chrome) */
+}
+/* Javascript background */
+.navbar.scrolled{
+    background-color: rgba(32, 42, 60, 0.879);
+    transition:  background-color 0.4s ease;
+}
 
- /* brand */
- .navbar div{
-    color: aliceblue;
-    font-size: 18PX;
-    margin-left: 20PX;
- }
- /* heading icons */
+.brand {
+  color: white;
+  font-size: 13px;
+  letter-spacing: 3px;
+  flex-shrink: 0;
+  font-family :"Montserrat", sans-serif;
+  margin-left: 20px;
+}
 
+/* NAVBAR UL */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  white-space: nowrap;  
+  flex-wrap: nowrap;
+}
+
+.navbar ul li {
+  color: whitesmoke;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.navbar ul li:hover {
+  color: rgb(78, 71, 36);
+}
+
+/* SOCIAL ICONS */
 .social-icons {
-    display: flex;
-    gap: 20px;
-    align-items:center ;
-  
-    
-
- }
- .social-icons i {
-    font-size: 19px;
-    color: white;
-     
-
- }
-
- .navbar ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: nowrap; /*avoid text wrap*/
-    align-items: center;
-    gap: 30px;
-    
-    
- }
- .navbar ul li{
-    color: whitesmoke;
-    text-decoration: none;  
-    flex-grow: 0;
-    flex-shrink: 1;
-    white-space: nowrap;
-
- }
- /* BANNER */
- .banner{
-    background-image: url(Images/pexels-miroalt-176398.jpg);
-    background-size: cover;
-    background-position: center 30% ;
-    background-repeat: no-repeat;
-    height: 700px;
-    width: 100%;
-    height: 67vh;
-    min-height: 400px;
-    position: relative;
- 
- }
- /*
- @media (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px 20px;
-    }
-    .navbar div{
-        margin-bottom: 0;
-        margin-bottom: 10px;
-    }
-    .navbar ul {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px 0;
-        width: 100%;
-    }
-    .social-icons {
-        justify-content: flex-start;
-        gap: 15px;
-        align-self: flex-start;
-    }
-
-    .banner {
-        height: 40vh;
-        margin-top: 150px;
-    }
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  white-space: nowrap;
 }
-*/
-/* sticky box */
 
-.sticky-box{
-   position: fixed;
-    background-color: brown;
-    width: fit-content;
-    top: 65%;
-    left: 0;
-     transform: translateY(-50%) rotate(-90deg);
-    transform-origin: left top;
-    color: rgb(255, 255, 255);
-    font-style: normal;
-    padding: 12px 10px;
-    
+.social-icons i {
+  font-size: 19px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color:#ab723c;;
+}
+
+/* BANNER */
+.banner {
+  background-image: url(Images/pexels-miroalt-176398.jpg);
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  height: 70vh;
+  min-height: 400px;
+  position: relative;
+}
+
+/* STICKY BOX */
+.sticky-box {
+  position: fixed;
+  background-color:#ab723c;
+  width: fit-content;
+  font-family :"Montserrat", sans-serif;
+  font-weight: 500;
+
+  top: 63%;
+  left: 0;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left top;
+  color: white;
+  font-style: normal;
+  padding: 10px 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
  
 }
 
+/* Optional: scroll-based navbar color change */
+body {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
 
+/* If you plan to make the navbar change color on scroll: */
+.scrolled .navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.4s ease;
+}

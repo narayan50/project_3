@@ -1,11 +1,12 @@
-<script>
-  const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector('.navbar');
+function CheckScroll(){
+  if (window.scrollY>1){
+    navbar.classList.add('scrolled');
 
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 0) {
-      navbar.classList.add('scrolled'); // add class when scrolling down
-    } else {
-      navbar.classList.remove('scrolled'); // remove class when at top
-    }
-  });
-</script>
+  } else{
+    navbar.classList.remove('scrolled');
+  
+  }
+ 
+}
+ window.addEventListener('scroll',CheckScroll);
