@@ -100,12 +100,21 @@ body{
 .banner {
   background-image: url(Images/pexels-miroalt-176398.jpg);
   background-size: cover;
-  background-position: center 30%;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: calc(100vh - 80px);
+  width: 100%;
   min-height: 400px;
   position: relative;
+  padding-top: 80px;
  
+}
+@media(max-width: 768px) {
+  .banner {
+    height: 60vh;
+    background-position: center top;
+   
+  }
 }
 
 /* STICKY BOX */
@@ -184,7 +193,6 @@ body {
   margin-top: 50px;
   margin-bottom: 100px;
   
-
 }
 .container-two{
    background-color:rgb(250, 250, 250);
@@ -196,6 +204,26 @@ body {
    margin-bottom: 50px;
 
 }
+.container-four{
+   background-color:rgb(250, 250, 250);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px 80px;
+   margin-top: 50px;
+   margin-bottom: 50px;
+
+}
+.container-three{
+   background-color:rgb(250, 250, 250);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px 80px;
+   margin-top: 80px;
+   margin-bottom: 50px;
+
+}
 .container-two P{
   color: black;
   max-width: 700px;
@@ -203,13 +231,35 @@ body {
   line-height: 1.5;
   margin-top: 15px;
 }
-
+.container-three P{
+  color: black;
+  max-width: 700px;
+  display: flex;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+.container-four P{
+  color: black;
+  max-width: 700px;
+  display: flex;
+  line-height: 1.5;
+  margin-top: 15px;
+}
 .container-two h2{
    color: black;
   margin-top: 30px;
   display: flex;
 }
-
+.container-three h2{
+   color: black;
+  margin-top: 30px;
+  display: flex;
+}
+.container-four h2{
+   color: black;
+  margin-top: 30px;
+  display: flex;
+}
 .content-two{
   display: flex;
   flex-direction: row-reverse;
@@ -218,8 +268,30 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  max-width: 1100px;
   width: 100%;
+  
+}
+.content-three{
+  display: flex;
+  flex-direction: row;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  
+}
+.content-four{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  
   
 }
 .content{
@@ -229,7 +301,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  max-width: 1100px;
   width: 100%;
   
 }
@@ -260,6 +331,26 @@ body {
   font-size: 13px;
   letter-spacing: 1px
 }
+.text-box-three a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ab723c;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 1px
+}
+.text-box-four a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ab723c;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 1px
+}
 .container h2{
   color: black;
   margin-top: 30px;
@@ -268,16 +359,63 @@ body {
 
 }
 .container img{
-  max-width: 600px;
-  max-height: 450px;
+  width: 300px;
+  height: 450px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .container-two img{
-  max-width: 600px;
-  max-height: 450px;
+  width: 300px;
+  height: 450px;
   object-fit: cover;
+  flex-shrink: 0;
 }
+.container-three img{
+   width: 300px;
+   height: 450px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.container-four img{
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+/* media query  */
+@media( max-width: 768px){
+  .content, .content-two,.content-three,.content-four{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 
+  }
+  /* shrink text and spacing */
+  .text-box, .text-box-two, .text-box-three ,.text-box-four{
+    width: 90%;
+    font-size: 15px;
 
+  }
+  .container h2, .container-two h2, .container-three h2, .container-four h2{
+    font-size: 18px;
+     
+   
+  }
+  /* for image */
+  .img-box, .img-box-two, .img-box-three ,.img-box-four{ 
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    flex-shrink: 1; /*allow shrinking*/
+    flex-grow: grow; /*allow growing*/
+    flex-basis: auto;
+  }
+  .container, .container-two, .container-three, .container-four{
+    padding: 20px 10px;
+}
+}
 
