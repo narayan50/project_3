@@ -324,6 +324,10 @@ body {
   line-height: 1.5;
   margin-top: 30px;
 }
+
+.sm{
+  display: none;
+}
 .text-box a {
   display: inline-block;
   text-decoration: none;
@@ -398,59 +402,121 @@ body {
 }
 /* media query  */
 @media( max-width: 768px){
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-  .content, .content-two,.content-three,.content-four{
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .banner{
+    width: 100%;
+    padding-top: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+  }
+  .firstpara h1{
+    font-size: 25px;
+    padding: 10px;
+    font-family :"Montserrat", sans-serif;
+    
+   
+  }
+  .paragraph p{
+    font-size: 13px;
+    padding: 10px;
+    font-family :"Montserrat", sans-serif;
+    font-weight: 100;
+    margin-bottom: 30px;
+  }
+  
+  .content, .content-two, .content-three, .content-four {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap:nowrap;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .content-two, .content-four{
-    display: flex;
-    flex-direction: row-reverse;
-    margin-top: 15px;
-  }
-  .btn{
+    width: 100%;
+    padding: 0;
+    margin: 10px 0;
+    gap: 15px;
     
-    margin-top: 15px;
-  
   }
-  /* shrink text and spacing */
 
-  .container h2, .container-two h2, .container-three h2, .container-four h2{
-    font-size: 1.1em;
-     
-   
+  .content-two, .content-four {
+    flex-direction: row-reverse;
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: fit-content;
+  }
+
+  /* shrink text and spacing */
+  .container h2, .container-two h2, .container-three h2, .container-four h2 {
+    display: contents;
+    font-size: 12px;
+    margin-bottom: 8px;
   }
   .text-box, 
     .text-box-two, 
     .text-box-three,
     .text-box-four {
-        width: 300px; /* Allow the text to take up a majority of the space */
+        width: 200px;
         font-size: 12px;
-        margin-right: 100px;
-        
+        padding: 0 10px;
     }
+
+  .text-box h2, 
+    .text-box-two h2, 
+    .text-box-three h2,
+    .text-box-four h2 {
+        white-space: normal;
+        word-wrap: break-word;
+        font-size:m 12px;
+        margin-bottom: 8px;
+    }
+
+  .text-box p, 
+    .text-box-two p, 
+    .text-box-three p,
+    .text-box-four p {
+         display: none;
+      
+    }
+    .sm{
+
+      display: block !important;;
+      font-size: 12px;
+      margin-top: 10px;
+      color: black;
+      max-width: 200px;
+      line-height: 1.4;
+    }
+
+
+  
   /* for image */
-  .container img , .container-two img , .container-three img , .container-four img {
-    width: 150px;
-    height: auto;
-    max-width: none;
-    flex-shrink: 1;
-    flex-grow: 0;
+  .container img,
+  .container-two img,
+  .container-three img,
+  .container-four img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
-  .container, .container-two, .container-three, .container-four{
-    padding: 1px 1px;
-
+  .container,
+  .container-two,
+  .container-three,
+  .container-four {
+    padding: 10px 5px;
+    margin: 50px 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
     
 }
 }
