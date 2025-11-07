@@ -140,7 +140,7 @@ body{
 /* Optional: scroll-based navbar color change */
 body {
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
 }
 
@@ -176,9 +176,10 @@ body {
 .paragraph p{
   color: black;
   align-items: center;
-  font-family: "Playwrite US Modern", cursive;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-style: italic;
+ 
 }
 .container-fluid{
   color: black;
@@ -407,12 +408,47 @@ body {
     padding: 0;
     box-sizing: border-box;
   }
-  .banner{
+  .navbar{
+    position: fixed;
     width: 100%;
-    padding-top: 80px;
-    background-size: contain;
+    z-index: 9999;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+   -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+   -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family :"Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: visible;
+    overflow-x: auto;
+    scrollbar-width: none;
+    letter-spacing: none;
+    top: 0;
+    left: 0;
+  }
+
+  
+  .brand{
+    color:#ab723c ;
+   
+  }
+  .banner{
+    background-image: url(Images/banner_img_for\ _mediaquery.jpg)  ;
+    height: 70vh;
+    width: 100%;
+    padding-top:0px;
+    margin-top: 0px !important;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
 
   }
   .firstpara h1{
@@ -425,9 +461,9 @@ body {
   .paragraph p{
     font-size: 13px;
     padding: 10px;
-    font-family :"Montserrat", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     margin-bottom: 30px;
+    line-height: 1.1;
   }
   
   .content, .content-two, .content-three, .content-four {
@@ -454,6 +490,7 @@ body {
   /* shrink text and spacing */
   .container h2, .container-two h2, .container-three h2, .container-four h2 {
     display: contents;
+    letter-spacing: 0em !important;
     font-size: 12px;
     margin-bottom: 8px;
   }
@@ -461,8 +498,12 @@ body {
     .text-box-two, 
     .text-box-three,
     .text-box-four {
-        width: 200px;
-        font-size: 12px;
+        width: 100%;
+        text-align: justify;
+        word-spacing: -1px;
+        overflow-wrap: break-word;
+        letter-spacing: 0em !important;
+        font-size: 14px;
         padding: 0 10px;
     }
 
@@ -481,6 +522,7 @@ body {
     .text-box-three p,
     .text-box-four p {
          display: none;
+
       
     }
     .sm{
@@ -490,7 +532,10 @@ body {
       margin-top: 10px;
       color: black;
       max-width: 200px;
-      line-height: 1.4;
+      line-height: 0em; letter-spacing: normal !important;
+  word-spacing: normal!important;
+  line-height: 1.1 !important;
+  
     }
 
 
@@ -511,6 +556,7 @@ body {
   .container-three,
   .container-four {
     padding: 10px 5px;
+    margin-top: 0px;
     margin: 50px 0;
     width: 100%;
     max-width: 100%;
