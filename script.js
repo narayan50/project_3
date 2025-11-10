@@ -27,19 +27,8 @@ const handleScroll = () => {
                 section.classList.add('animate-in');
             }
         }
-    }); // <-- The closing brace for the forEach loop was missing an element
-        //     but the main issue is the missing closing brace for handleScroll itself.
-        //     I've checked the forEach and it appears to have its closing brace.
-        //     The missing brace is for handleScroll().
-    
-}; // <--- THIS CLOSING BRACE WAS MISSING
-// The code in the prompt was:
-// ...
-//        
-// }; <--- This was the closing brace for the sections.forEach() callback function.
-//
-// The missing closing brace for the handleScroll function should be placed here.
-
+    });
+};
 
 // 3. ATTACH THE SINGLE, COMBINED FUNCTION TO THE SCROLL EVENT
 document.addEventListener('DOMContentLoaded', () => {
@@ -50,8 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
 });
 
-// REMOVE THESE! They are no longer needed as they are combined above.
-/*
-function CheckScroll(){ ... }
-document.addEventListener('DOMContentLoaded', () => { ... }
-*/
+//animation for text-box on scroll
+
+window.addEventListener('scroll', function() 
+{
+    const elements = document.querySelectorAll('.text-box, .text-box-two, .text-box-three, .text-box-four');
+    elements.forEach(el => {
+        let position = el.getBoundingClientRect().top;
+        if (position < window.innerHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+});
