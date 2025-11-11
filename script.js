@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('scroll', function() 
 {
-    const elements = document.querySelectorAll('.text-box, .text-box-two, .text-box-three, .text-box-four');
+    const elements = document.querySelectorAll('.firstpara, .paragraph, .text-box, .text-box-two, .text-box-three, .text-box-four');
     elements.forEach(el => {
         let position = el.getBoundingClientRect().top;
         if (position < window.innerHeight - 100) {
