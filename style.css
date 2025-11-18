@@ -56,7 +56,7 @@ body{
 }
 
 .brand {
-  color: white;
+  color: rgb(202, 109, 2);
   font-size: 13px;
   letter-spacing: 3px;
   flex-shrink: 0;
@@ -166,12 +166,13 @@ body{
   margin-top: 80px;
  
 }
-.firstpara h1 {
+.firstpara p {
   color: #0b0b0b;
-  font-size: 40px;
+  font-size: 45px;
   font-family: "silkserif", serif !important;
   font-weight: normal;
   letter-spacing: 1px;
+  font-weight: lighter;
 
 }
 /* paragaph */
