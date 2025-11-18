@@ -20,7 +20,7 @@ body{
 
 /* NAVBAR */
 .navbar {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 9999;
   background-color: transparent;
@@ -56,7 +56,7 @@ body{
 }
 
 .brand {
-  color: rgb(202, 109, 2);
+   color:#ab723c;
   font-size: 13px;
   letter-spacing: 3px;
   flex-shrink: 0;
@@ -104,7 +104,7 @@ body{
 }
 
 .social-icons i:hover {
-  color:#ab723c;;
+  color:#ab723c;
 }
 
 /* BANNER */
@@ -452,7 +452,7 @@ body{
 .upperfooter p{
   /* display: flex; */
   color: #ffffff;
-  font-size: 35px;
+  font-size: 30px;
 
 
  
@@ -483,10 +483,21 @@ body{
 }
 .animate-foot p{
   color: #ffffff;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 20px;
    
 }
+.animate-foot p{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-foot  .active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 
