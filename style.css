@@ -496,7 +496,23 @@ body {
   font-size: 40px;
 
 
+}
+.upperfooter .f_banner .animate p{
+  display: inline-block;
+  animation: slideup 1s ease;
+ 
+}
+@keyframes slideup {
+  0%{
+   transform:translateY(50px);
+   opacity: 0;
+  }
 
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
 }
 
 .upperfooter a {
@@ -506,7 +522,6 @@ body {
 }
 
 .btn {
-  display: in;
   padding: 8px;
   border-radius: 30px;
   background-color: #ab723c;
