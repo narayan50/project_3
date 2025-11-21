@@ -493,7 +493,7 @@ body {
 .upperfooter p {
   /* display: flex; */
   color: #ffffff;
-  font-size: 30px;
+  font-size: 40px;
 
 
 
@@ -506,6 +506,7 @@ body {
 }
 
 .btn {
+  display: in;
   padding: 8px;
   border-radius: 30px;
   background-color: #ab723c;
@@ -533,8 +534,12 @@ body {
   font-size: 2rem;
   font-weight: 600;
   color: #ffffff;
+  display: inline-block;
 }
+.partners-container h2:hover{
+  color: #ab723c;
 
+}
 /* Slider Container */
 .partners-slider {
   overflow: hidden;
@@ -579,7 +584,7 @@ body {
 
 /* Logo Styling */
 .partners-track img {
-  height: 60px !important;     /* All logos same height */
+  height: 60px !important;     
   width: auto !important;
   flex-shrink: 0;
   filter: opacity(1);
@@ -663,6 +668,46 @@ body {
   opacity: 1;
   transform: translateY(0);
 
+}
+
+/* signup container */
+.signup-container{
+  display: flex;
+  background-color: #ab723c;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+}
+.signup-panel p{
+  color: #ffffff;
+  font-size: 15px;
+  
+}
+.link{
+  color: #ffffff;
+  text-decoration: underline;
+  transition: transform 0.9s ease;
+}
+.link:hover{
+
+  transform: scale(1.05);
+
+}
+/* footer */
+.footer{
+   text-align: center;
+  padding: 60px 20px;
+  background: #faf8f5;
+  color: #665e56;
+  font-family: "Helvetica", sans-serif;
+  
+
+}
+.footer img{
+  max-height: 120px;
+  max-width: 17%;
+  margin-right: 12px;
 }
 
 
